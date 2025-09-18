@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>JS Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+      </li>
+      <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+      <li><a class="nav-link" href="#Variables">Variables</a></li>
+      <li>
+        <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+      </li>
+      <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+      <li>
+        <a class="nav-link" href="#Global_variable">Global variable</a>
+      </li>
+      <li><a class="nav-link" href="#Constants">Constants</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li>
+        <a class="nav-link" href="#If_else_statement">if else statement</a>
+      </li>
+      <li><a class="nav-link" href="#While_statement">while statement</a></li>
+      <li>
+        <a class="nav-link" href="#Function_declarations">Function declarations</a>
+      </li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>JavaScript is a versatile programming language commonly used to create interactive effects within web
+          browsers. Created by Netscape in 1995, it was initially intended to add small-scale interactivity to web
+          pages. Over time, JavaScript has evolved into a powerful, versatile, and efficient language capable of
+          handling complex logic, animations, and event-driven functionalities. With the advent of JavaScript engines
+          like V8 and Node.js, it's now used on both the front end (in the browser) and the back end (on servers),
+          making it essential for web development and a core technology alongside HTML and CSS.</p>
+      </article>
+    </section>
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <article>
+        <p>
+          Before diving into JavaScript, some prerequisites will help you understand concepts more easily:
+        </p>
+        <ul>
+          <li>
+            HTML (HyperText Markup Language): It's beneficial to know the basics of HTML, as JavaScript often interacts
+            with HTML elements to create dynamic web pages.
+          </li>
+          <li>
+            CSS (Cascading Style Sheets): A fundamental understanding of CSS will help, as JavaScript can manipulate
+            styles to change the appearance of elements on a page.
+          </li>
+          <li>
+            Basic Programming Concepts: Familiarity with basic concepts such as variables, loops, functions, and
+            conditional statements will be advantageous. Although JavaScript introduces unique concepts, many principles
+            are universal.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="JavaScript_and_Java">
+      <header>JavaScript and Java</header>
+      <article>
+        <p>
+          JavaScript and Java are two distinct programming languages with different syntaxes, use cases, and behaviors,
+          despite having similar names. JavaScript is dynamically typed, prototype-based, and primarily used for
+          client-side scripting. Java, on the other hand, is a statically typed, object-oriented programming language
+          used in server-side applications, Android development, and large-scale systems. While Java must be compiled
+          before running, JavaScript code is interpreted, making it faster for smaller applications. Knowing the
+          differences can help avoid confusion between the two languages and clarify that learning one does not directly
+          translate to learning the other.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Hello_world">
+      <header>Hello world</header>
+      <article>
+        <p>
+          The classic "Hello, World!" example is often used as a simple introduction to a programming language. In
+          JavaScript, you can write this in various ways to display a message on a web page or in the browser console.
+          For example:
+        </p>
+        <pre>
+          <code>
+          // Your code here
+          function example() {
+          console.log("This is a block of code.");
+          }
+          </code>
+        </pre>
+        <p>
+          In this example, JavaScript waits until the HTML document has fully loaded, then displays "Hello, World!"
+          inside the div element.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <article>
+        <p>
+          In JavaScript, variables are used to store data values. These values can be modified and accessed throughout
+          the code, making variables fundamental to any programming. JavaScript has three main ways to declare
+          variables:
+        </p>
+        <ul>
+          <li>
+            var: This is the oldest way to declare a variable in JavaScript, with function scope rather than block
+            scope.
+          </li>
+          <li>
+            let: Introduced in ES6 (ECMAScript 2015), let allows you to declare block-scoped variables, making it safer
+            for use in loops and conditionals.
+          </li>
+          <li>
+            const: Also introduced in ES6, const declares a constant, read-only variable, which means its value cannot
+            be changed after initial assignment.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Declaring_variables">
+      <header>Declaring variables</header>
+      <article>
+        <p>
+          Declaring variables in JavaScript requires a keyword (var, let, or const) followed by the variable name. Here
+          are examples:
+        </p>
+        <pre>
+          <code>
+          var name = "Alice";     // Declares a function-scoped variable
+          let age = 25;           // Declares a block-scoped variable
+          const country = "USA";  // Declares a block-scoped constant
+          </code>
+        </pre>
+        <p>
+          Using let and const is now the preferred approach for better control of scope. const should be used for values
+          that remain constant, like configuration values or mathematical constants.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Variable_scope">
+      <header>Variable scope</header>
+      <article>
+        <p>
+          Scope defines where variables can be accessed or used in JavaScript. JavaScript has three types of scope:
+        </p>
+        <ul>
+          <li>
+            Global Scope: Variables declared outside any function or block have a global scope, meaning they can be
+            accessed anywhere in the code.
+          </li>
+          <li>
+            Function Scope: Variables declared inside a function are accessible only within that function.
+          </li>
+          <li>
+            Block Scope: Variables declared with let or const within a block (such as in loops or conditionals) are only
+            accessible within that block. This was introduced to prevent issues like unexpected variable modification in
+            loops.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="Global_variable">
+      <header>Global variable</header>
+      <article>
+        <p>
+          Global variables are accessible throughout the entire codebase, making them useful for values that need to be
+          referenced frequently. However, overusing global variables can lead to code conflicts and bugs, especially in
+          larger applications. In modern JavaScript, global variables should be minimized and, if needed, encapsulated
+          to prevent unexpected behavior.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Constants">
+      <header>Constants</header>
+      <article>
+        <p>
+          Constants are variables that cannot be reassigned after they are set. They provide a way to declare values
+          that should remain unchanged, which can help prevent errors in your code. JavaScript uses const to declare
+          constants, which are block-scoped:
+        </p>
+        <pre>
+          <code>
+            const MAX_USERS = 100;
+            const API_URL = "https://api.example.com";
+          </code>
+        </pre>
+        <p>
+          Once declared, attempting to reassign a constant will result in an error.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+      <article>
+        <p>
+          JavaScript supports multiple data types, which can be loosely categorized into two types: Primitive Types and
+          Reference Types.
+        </p>
+        <p>
+          Primitive Types include:
+        </p>
+        <ul>
+          <li>String: "Hello"</li>
+          <li>Number: 42 or 3.14</li>
+          <li>Boolean: true or false</li>
+          <li>Undefined: A declared variable without an assigned value</li>
+          <li>Null: A deliberate non-value</li>
+          <li>Symbol: A unique identifier (introduced in ES6)</li>
+        </ul>
+        <p>
+          Reference Types include:
+        </p>
+        <ul>
+          <li>Objects: A collection of key-value pairs</li>
+          <li>Arrays: An ordered list of values</li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="If_else_statement">
+      <header>If else statement</header>
+      <article>
+        <p>
+          The if-else statement is a control structure that allows you to execute code based on a condition:
+        </p>
+        <pre>
+          <code>
+            let temperature = 30;
+            if (temperature > 25) {
+                console.log("It's hot outside.");
+            } else if (temperature < 15) {
+                console.log("It's cold outside.");
+            } else {
+                console.log("The weather is mild.");
+            }
+          </code>
+        </pre>
+        <p>
+          The if block runs if the condition is true; otherwise, the else block runs. Additional conditions can be
+          checked with else if statements.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="While_statement">
+      <header>While statement</header>
+      <article>
+        <p>
+          The while loop repeatedly executes a block of code as long as a specified condition evaluates to true:
+        </p>
+        <pre>
+          <code>
+            let count = 0;
+            while (count < 5) {
+                console.log("Count is: " + count);
+                count++;
+            }
+          </code>
+        </pre>
+        <p>
+          In this example, the while loop increments count and prints it, stopping once count reaches 5.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Function_declarations">
+      <header>Function declarations</header>
+      <article>
+        <p>
+          Functions are reusable blocks of code that can be called to perform a specific task. Declaring functions in
+          JavaScript is done using the function keyword:
+        </p>
+        <pre>
+          <code>
+            function multiply(a, b) {
+                return a * b;
+            }
+            console.log(multiply(2, 3)); // Output: 6
+          </code>
+        </pre>
+        <p>
+          JavaScript functions allow parameter passing and return values, making them versatile for code organization.
+          Functions can also be assigned to variables, passed as arguments, and returned from other functions.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <p>
+          For a deeper understanding of JavaScript and its nuances, these resources are highly recommended:
+        </p>
+        <ul>
+          <li>
+            Mozilla Developer Network (MDN): Offers comprehensive guides and references on all JavaScript concepts and
+            browser APIs.
+          </li>
+          <li>
+            freeCodeCamp: A free learning platform that offers hands-on JavaScript exercises and certifications.
+          </li>
+          <li>
+            JavaScript.info: Detailed, well-structured tutorials that cover everything from basics to advanced topics in
+            JavaScript.
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>

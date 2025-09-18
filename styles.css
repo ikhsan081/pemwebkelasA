@@ -1,0 +1,129 @@
+/* Base styles (Desktop) */
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+nav {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+article {
+  text-align: justify;
+}
+
+#main-doc {
+  margin-left: 300px;
+  padding: 20px;
+  max-width: 800px;
+}
+
+header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+p {
+  padding-left: 1em;
+}
+
+article ul {
+  list-style-position: inside;
+  padding-left: 10px;
+  list-style:disc;
+}
+
+article ul li {
+  margin-left: 1em;
+  padding: 5px 0 5px 0;
+}
+
+/* Tablet and Small Desktop */
+@media (max-width: 1024px) {
+  nav {
+    width: 200px;
+    padding: 15px;
+  }
+
+  #main-doc {
+    margin-left: 220px;
+    padding: 15px;
+  }
+
+  header {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  nav {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  #main-doc {
+    margin: 0;
+    padding: 10px;
+  }
+
+  header {
+    font-size: 18px;
+  }
+
+  .nav-link {
+    padding: 8px 0;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  nav {
+    font-size: 14px;
+  }
+
+  header {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  #main-doc {
+    padding: 8px;
+  }
+}
